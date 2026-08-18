@@ -1,0 +1,46 @@
+name: A dataset is missing
+description: Ask for data that imibare does not publish yet.
+title: "[request] "
+labels: ["dataset-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requests are the fastest way to find out which numbers people actually
+        want, which is not always the ones that are easy to get. Ask even if you
+        are not sure the data exists in a usable form.
+
+        What usually decides whether something can be added is not interest but
+        shape: a table that changes its columns every edition, or a scanned PDF
+        with no machine-readable original, costs far more than a spreadsheet
+        does.
+  - type: input
+    id: institution
+    attributes:
+      label: Which institution publishes it
+      description: For example NISR, BNR, MINECOFIN, KNBS, the Central Bank of Kenya.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What the data covers
+      description: The subject, the frequency if you know it, and how far back it goes.
+      placeholder: |
+        Monthly electricity tariffs by customer category, 2015 onwards
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where it is published
+      description: A link to the page or file, if you have one. A portal name is fine if you do not.
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: What you would use it for
+      description: Not a test to pass. It helps to know whether one figure is needed or a full series, and how current it has to be.
+    validations:
+      required: false

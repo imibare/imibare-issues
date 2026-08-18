@@ -1,0 +1,54 @@
+name: A number looks wrong
+description: Report a figure you believe imibare has published incorrectly.
+title: "[data] "
+labels: ["data-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for this. Errors in the data are the most useful thing you can
+        report, and every report is taken seriously: the whole point of this
+        project is that the numbers should be trustworthy.
+
+        Two kinds of problem look identical from the outside, and both are worth
+        reporting. imibare may have extracted the figure wrongly, or the source
+        may have published it wrongly and imibare passed it through. Say which
+        you think it is if you have a view, and do not worry if you do not.
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset ID
+      description: The four-part ID from the dataset page, for example `ke.knbs.fuel-sales.annual`.
+      placeholder: rw.nisr.cpi.monthly
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What imibare shows
+      description: The value as published, and enough of the row to find it (the period, and the item or category).
+      placeholder: |
+        2024, Illuminating kerosene: 367.0 thousand tonnes
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you believe it should be
+      description: If you are not sure of the right value, say what looks wrong about the published one.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to the publication you are comparing against, and a page or table number if you have one. Every dataset page links to its own source.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: How you came across it, and whether other figures in the same dataset look affected.
+    validations:
+      required: false

@@ -1,0 +1,26 @@
+name: Something on the site is broken
+description: A chart that will not load, a download that fails, a page that errors.
+title: "[site] "
+labels: ["site"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Where
+      description: The page address.
+      placeholder: https://imibare.org/datasets/ke.knbs.electricity-supply.annual
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected instead
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      description: Helpful for anything visual. Skip it for a download or an API problem.
+    validations:
+      required: false

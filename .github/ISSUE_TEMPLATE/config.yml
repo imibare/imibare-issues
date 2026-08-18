@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Terms of use and licensing
+    url: https://imibare.org/terms
+    about: What imibare does and does not claim about the data, and how per-publisher terms work. Rights questions about a particular dataset are best asked of the publishing institution.
+  - name: Documentation
+    url: https://imibare.org/docs
+    about: The Python client, the REST API, and how to work with the catalog.
